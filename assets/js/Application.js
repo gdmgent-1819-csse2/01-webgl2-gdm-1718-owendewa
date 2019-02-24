@@ -10,9 +10,13 @@ export default class Application{
     constructor(){
         const v1 = new Vector2(2,3);
         const v2 = new Vector2(2.5,3.5);
-        const v3 = new Vector2(8,5);
-        const v4 = new Vector2(3,8);
-
+        const v3 = v1.addition(v2);
+    
+        console.log('-----Testing 2D vectors------');
+        console.log('Addition');
+        console.log(v1,v2);
+        console.log(v3);
+        
         const vector3 = new Vector3(2, 1, 5);
         const vector3_2 = new Vector3(3, 4, 2);
         

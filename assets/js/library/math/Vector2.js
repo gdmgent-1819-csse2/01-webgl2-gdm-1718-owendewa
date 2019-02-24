@@ -1,6 +1,7 @@
 export default class Vector2{
     /**
-     * 
+     * Represents a 2d Vector
+     * @constructor
      * @param {Number} x 
      * @param {Number} y 
      */
@@ -9,27 +10,27 @@ export default class Vector2{
         this.y = Number(y) || 0;
     }
     /**
-     * Addition
+     * Addition of two 2d Vectors
      * 
-     * @param {Vector2} v 
+     * @param {Vector2} v second vector
      */
     addition(v){
         this.x += v.x;
         this.y += v.y;
     }
     /**
-     * Subtraction
+     * Subtraction of two 2d Vectors
      * 
-     * @param {Vector2} v 
+     * @param {Vector2} v second vector
      */
     subtraction(v){
         this.x -= v.x;
         this.y -= v.y;
     }
     /**
-     * Scaling
+     * Scaling of two 2d Vectors
      * 
-     * @param {Number} a 
+     * @param {Number} a second vector
      */
     scaler(a){
         this.x *= a.x;
@@ -37,15 +38,16 @@ export default class Vector2{
     }
     /**
      * Norm
-     * calculating Length of vector
-     * 
-     * @param {Number} a 
+     * calculating Length of a 2d vector
      */
     norm(){
         return Math.sqrt(this.x**2 + this.y**2);
     }
+   
     /**
+     * Dot
      * 
+     * @param {Number} v 
      */
     dot(v){
         return this.x * v.x + this.y * v.y;

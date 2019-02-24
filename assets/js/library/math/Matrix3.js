@@ -1,7 +1,8 @@
 export default class Matrix3{
-    /**
-     * 
-     * @param {*} items 
+     /**
+     * Represents 3D matrix
+     * @constructor
+     * @param {*} items the items for this matrix
      */
     constructor(items){
         this.items = items || [
@@ -11,9 +12,9 @@ export default class Matrix3{
         ]
     }   
     /**
-     * add two 3X3 matrices
-     * @param {Matrix3} b 
-     */
+     * Addition of two 3D matrixes (a and b)
+     * @param {Matrix3} b The second matrix
+     */ 
     addidtionM3(b){
         const a = this.items
         this.items = [
@@ -23,8 +24,8 @@ export default class Matrix3{
         ]
     }
     /**
-     * Subtract two 3X3 matrices
-     * @param {Matrix3} b 
+     * Subraction of two 3D matrixes (a and b)
+     * @param {Matrix3} b The second matrix
      */
     subtractionM3(b){
         const a = this.items
@@ -34,10 +35,10 @@ export default class Matrix3{
             (a[6] - b[6]), (a[7] - b[7]), (a[8] - b[8]),
         ]
     }
-    /**
-     * Multiply two 3X3 matices 
-     * @param {Matrix3} b 
-     */
+     /**
+     * Multiplying of two 3D matrixes (a and b)
+     * @param {Matrix3} b The second matrix
+     */ 
     multiplyM3(b){
         const a = this.items
         const c = []

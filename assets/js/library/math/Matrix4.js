@@ -1,7 +1,8 @@
 export default class Matrix4{
     /**
-     * 
-     * @param {*} items 
+     * Represents 4D matrix
+     * @constructor
+     * @param {*} items the items for this matrix
      */
     constructor(items){
         this.items = items || [
@@ -12,9 +13,9 @@ export default class Matrix4{
         ]
     }   
     /**
-     * add two 4X4 matrices
-     * @param {Matrix4} b 
-     */
+     * Addition of two 4D matrixes (a and b)
+     * @param {Matrix4} b The second matrix
+     */ 
     addidtionM4(b){
         const a = this.items
         this.items = [
@@ -26,8 +27,8 @@ export default class Matrix4{
         ]
     }
     /**
-     * Subtract two 4X4 matrices
-     * @param {Matrix4} b 
+     * Subraction of two 4D matrixes (a and b)
+     * @param {Matrix4} b The second matrix
      */
     subtractionM4(b){
         const a = this.items
@@ -39,10 +40,10 @@ export default class Matrix4{
 
         ]
     }
-    /**
-     * Multiply two 4X4 matices 
-     * @param {Matrix4} b 
-     */
+     /**
+     * Multiplying of two 4D matrixes (a and b)
+     * @param {Matrix4} b The second matrix
+     */ 
     multiplyM4(b){
         const a = this.items
         const c = []
