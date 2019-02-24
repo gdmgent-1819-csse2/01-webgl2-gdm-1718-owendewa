@@ -19,12 +19,30 @@ export default class Application{
         const vector4 = new Vector4(2, 1, 5, 3 );
         const vector4_2 = new Vector4(3, 4, 2, 1 );
         
-        const matrix2 = Math.matrix([[0,1],[2,3],[4,5]]);
+        const matrix2 = new Matrix2([2,2,3,2]);
+        const matrix2_2 = new Matrix2([2,2,3,2]);
+
+        const matrix3 = new Matrix3([2,2,3,2,2,2,3,2,2]);
+        const matrix3_2 = new Matrix3([2,2,3,2,2,2,3,2,2]);
+
+        const matrix4 = new Matrix4([2,2,3,2,2,2,3,2,2,2,3,2,2,2,3,2])
+        const matrix4_2 = new Matrix4([2,2,3,2,2,2,3,2,2,2,3,2,2,2,3,2])
+
         
-        console.log(matrix2);
+        console.log(matrix4);
+        console.log(matrix4_2);
+        matrix4.multiplyM4(matrix4_2.items);
+        console.log(matrix4);
+
+        console.log(matrix3);
+        console.log(matrix3_2);
+        matrix3.multiplyM3(matrix3_2.items);
+        console.log(matrix3);
+       
         console.log(vector3);
         console.log(vector3_2);
         vector3.addition3(vector3_2)
         console.log('Som vector3 en vector3_2: X: ' + vector3.x + ' Y: ' + vector3.y + ' Z: ' + vector3.z);
+
     }   
 }

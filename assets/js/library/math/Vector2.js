@@ -2,7 +2,7 @@ export default class Vector2{
     /**
      * 
      * @param {Number} x 
-     * @param Number y 
+     * @param {Number} y 
      */
     constructor(x,y){
         this.x = Number(x) || 0;
