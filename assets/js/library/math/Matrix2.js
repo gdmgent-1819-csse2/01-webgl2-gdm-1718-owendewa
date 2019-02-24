@@ -14,7 +14,7 @@ export default class Matrix2{
      * Addition of two 2D matrixes (a and b)
      * @param {Matrix2} b The second matrix
      */ 
-    addidtionM2(b){
+    additionM2(b){
         const a = this.items
         this.items = [
             a[0] + b[0], a[1] + b[1],

@@ -40,7 +40,7 @@ export default class Vector4{
      * 
      * @param {Number} a second vector
      */
-    scaler(a){
+    scaler4(a){
         this.x *= a.x;
         this.y *= a.y;
         this.z *= a.z;

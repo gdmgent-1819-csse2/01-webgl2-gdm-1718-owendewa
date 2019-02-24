@@ -1,10 +1,8 @@
 import Vector2 from './library/math/Vector2.js';
-import Vector3 from './library/math/Vector3.js';
 import Vector4 from './library/math/Vector4.js';
 
 import Matrix2 from './library/math/Matrix2.js';
-import Matrix3 from './library/math/Matrix3.js';
-import Matrix4 from './library/math/Matrix4.js';
+import Tests from './Test/Library/Tests.js'
 
 export default class Application{
     constructor(){
@@ -12,6 +10,8 @@ export default class Application{
         const v2 = new Vector2(2.5,3.5);
         const v3 = new Vector2(4,6);
         const v4 = new Vector2(3,7);
+        const v5 = new Vector4(1,3,4,4);
+
 
         console.log('-----Testing 2D Vectors-----');
         console.log('-----Addition-----');
@@ -46,7 +46,7 @@ export default class Application{
         console.log('-----Testing 2D Matrices-----');
         console.log('-----Addition-----');
         console.log('Matrix1 ' , matrix2 , 'and Matrix2' ,matrix2_2);
-        matrix2_1.addidtionM2(matrix2_2.items);
+        matrix2_1.additionM2(matrix2_2.items);
         console.log('Matrix1 and Matrix2 become',matrix2_1);
         console.log('-----Subtraction-----');
         console.log('Matrix1 ' , matrix2_3 , 'and Matrix2' ,matrix2_4);
@@ -56,5 +56,12 @@ export default class Application{
         console.log('Matrix1 ' , matrix2_5 , 'and Matrix2' ,matrix2_6);
         matrix2_5_1.multiplyM2(matrix2_6.items);
         console.log('Matrix1 and Matrix2 become',matrix2_5_1);
+
+        const tests = true
+        if (tests) {
+            new Tests()
+        }
+        console.info('WebGL2 Demo')
     }   
+    
 }

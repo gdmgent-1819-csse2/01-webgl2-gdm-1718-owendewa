@@ -36,7 +36,7 @@ export default class Vector3{
      * 
      * @param {Number} a second vector
      */
-    scaler(a){
+    scaler3(a){
         this.x *= a.x;
         this.y *= a.y;
         this.z *= a.z;
@@ -55,7 +55,7 @@ export default class Vector3{
      * Norm
      * calculating Length of a 3d vector
     */
-    norm4(){
+    norm3(){
         return Math.sqrt(this.x**2 + this.y**2 + this.z**2);
     }
 
