@@ -8,18 +8,17 @@ export default class TestMatrix3 extends TestMatrix {
      */
     constructor() {
         super()
-        console.info('testing Matrix2')
+        console.info('testing Matrix3')
         this.testAdd()
         this.testSub()
         this.testMul()
-        this.testMulIdentity()
         this.testRot()
     }
     /**
      * Test the addition method.
      */
     testAdd() {
-        console.info('test Matrix2.add()')
+        console.info('test Matrix3.add()')
         const a = [
             1, 2, 1,
             3, 4, 3,
@@ -36,8 +35,8 @@ export default class TestMatrix3 extends TestMatrix {
             2,4,2,
         ]
         const m = new Matrix3(a)
-        m.additionM3(b)
-        const actual = m.elements
+        m.addidtionM3(b)
+        const actual = m.items
         this.assertIdentical(actual, expected)
     }
 
@@ -45,7 +44,7 @@ export default class TestMatrix3 extends TestMatrix {
      * Test the subtraction method.
      */
     testSub() {
-        console.info('test Matrix2.sub()')
+        console.info('test Matrix3.sub()')
         const a = [
             1, 2, 1,
             3, 4, 3,
@@ -63,7 +62,7 @@ export default class TestMatrix3 extends TestMatrix {
         ]
         const m = new Matrix3(a)
         m.subtractionM3(b)
-        const actual = m.elements
+        const actual = m.items
         this.assertIdentical(actual, expected)
     }
 
@@ -71,7 +70,7 @@ export default class TestMatrix3 extends TestMatrix {
      * Test the multiplication method.
      */
     testMul() {
-        console.info('test Matrix2.mul()')
+        console.info('test Matrix3.mul()')
         const a = [
             1,1,1,
             1,1,1,
@@ -89,7 +88,7 @@ export default class TestMatrix3 extends TestMatrix {
         ]
         const m = new Matrix3(a)
         m.multiplyM3(b)
-        const actual = m.elements
+        const actual = m.items
         this.assertIdentical(actual, expected)
     }
 
@@ -122,14 +121,16 @@ export default class TestMatrix3 extends TestMatrix {
         const a = [
             3, 0, 0,
             1, 0, 0,
+            0, 0, 0,
         ]
         const expected = [
-            -1, 0, 0,
-            3, 0, 0,
+            0, -3, 0,
+            0, -1, 0,
+            0, 0, 0,
         ]
         const m = new Matrix3(a)
         m.RotateM3(α)
-        const actual = m.elements
+        const actual = m.items
         this.assertIdenticalRounded(actual, expected)
     }
 }

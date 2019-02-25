@@ -12,7 +12,6 @@ export default class TestMatrix2 extends TestMatrix {
         this.testAdd()
         this.testSub()
         this.testMul()
-        this.testMulIdentity()
         this.testRot()
     }
     /**
@@ -34,7 +33,7 @@ export default class TestMatrix2 extends TestMatrix {
         ]
         const m = new Matrix2(a)
         m.additionM2(b)
-        const actual = m.elements
+        const actual = m.items
         this.assertIdentical(actual, expected)
     }
 
@@ -57,7 +56,7 @@ export default class TestMatrix2 extends TestMatrix {
         ]
         const m = new Matrix2(a)
         m.subtractionM2(b)
-        const actual = m.elements
+        const actual = m.items
         this.assertIdentical(actual, expected)
     }
 
@@ -80,33 +79,9 @@ export default class TestMatrix2 extends TestMatrix {
         ]
         const m = new Matrix2(a)
         m.multiplyM2(b)
-        const actual = m.elements
+        const actual = m.items
         this.assertIdentical(actual, expected)
     }
-
-    /**
-     * Test the multiplication method with an identity matrix.
-   
-    testMulIdentity() {
-        console.info('test Matrix2.mul() by identity matrix')
-        const a = [
-            1, 2,
-            3, 4,
-        ]
-        const i = [
-            1, 0,
-            0, 1,
-        ]
-        const expected = [
-            1, 2,
-            3, 4,
-        ]
-        const m = new Matrix2(a)
-        m.mul(i)
-        const actual = m.elements
-        this.assertIdentical(actual, expected)
-    }
-    */
     testRot() {
         console.info('test Matrix2.rot()')
         const α = 90
@@ -115,12 +90,12 @@ export default class TestMatrix2 extends TestMatrix {
             1, 0,
         ]
         const expected = [
-            -1, 0,
-            3, 0,
+            0, -3,
+            0, -1,
         ]
         const m = new Matrix2(a)
         m.RotateM2(α)
-        const actual = m.elements
+        const actual = m.items
         this.assertIdenticalRounded(actual, expected)
     }
 }

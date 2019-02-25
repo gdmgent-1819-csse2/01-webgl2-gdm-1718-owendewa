@@ -71,6 +71,6 @@ export default class Matrix3{
             sin, cos,0,
             0,0,1
         ]
-        this.multiplyM2(result);
+        this.multiplyM3(result);
     }
 }
