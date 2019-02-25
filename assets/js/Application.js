@@ -32,6 +32,7 @@ export default class Application{
         
         const matrix2 = new Matrix2([2,2,3,2]);
         const matrix2_1 = new Matrix2([2,2,3,2]);
+        const matrix2_1_2 = new Matrix2([2,2,3,2]);
         const matrix2_2 = new Matrix2([7,4,0,3]);
         
         const matrix2_3 = new Matrix2([2,0,4,9]);
@@ -56,6 +57,10 @@ export default class Application{
         console.log('Matrix1 ' , matrix2_5 , 'and Matrix2' ,matrix2_6);
         matrix2_5_1.multiplyM2(matrix2_6.items);
         console.log('Matrix1 and Matrix2 become',matrix2_5_1);
+        console.log('-----Rotation-----');
+        console.log('Matrix1 ' , matrix2_1_2);
+        matrix2.RotateM2(90);
+        console.log('Matrix1 90° rotated ' , matrix2);
 
         const tests = true
         if (tests) {

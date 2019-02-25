@@ -47,4 +47,19 @@ export default class Matrix2{
             this.items = c,
         ]
     }
+    /**
+     * Rotating 2D matrix
+     * @param {Number} d 
+     */
+    RotateM2(d){
+        d *= Math.PI / 180;
+        const cos = Math.cos(d);
+        const sin = Math.sin(d);
+
+        const result = [
+            cos, -sin,
+            sin, cos,
+        ]
+        this.multiplyM2(result);
+    }
 }

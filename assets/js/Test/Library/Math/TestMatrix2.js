@@ -106,7 +106,7 @@ export default class TestMatrix2 extends TestMatrix {
         const actual = m.elements
         this.assertIdentical(actual, expected)
     }
-
+    */
     testRot() {
         console.info('test Matrix2.rot()')
         const α = 90
@@ -119,9 +119,8 @@ export default class TestMatrix2 extends TestMatrix {
             3, 0,
         ]
         const m = new Matrix2(a)
-        m.rot(α)
+        m.RotateM2(α)
         const actual = m.elements
         this.assertIdenticalRounded(actual, expected)
     }
-      */
 }

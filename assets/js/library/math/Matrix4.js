@@ -70,4 +70,20 @@ export default class Matrix4{
 
         ]
     }
+    /**
+     * Rotation 4D matrix across z-as
+     * @param {Number} d 
+     */
+    RotateM4(d){
+        d *= Math.PI / 180;
+        const cos = Math.cos(d);
+        const sin = Math.sin(d);
+
+        const result = [
+            cos, -sin,0,0,
+            sin, cos,0,0,
+            0,0,1,0,
+        ]
+        this.multiplyM2(result);
+    }
 }

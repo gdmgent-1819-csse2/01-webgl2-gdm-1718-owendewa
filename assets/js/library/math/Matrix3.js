@@ -57,4 +57,20 @@ export default class Matrix3{
 
         ]
     }
+    /**
+     * Rotation 3D matrix across z-as
+     * @param {Number} d 
+     */
+    RotateM3(d){
+        d *= Math.PI / 180;
+        const cos = Math.cos(d);
+        const sin = Math.sin(d);
+
+        const result = [
+            cos, -sin,0,
+            sin, cos,0,
+            0,0,1
+        ]
+        this.multiplyM2(result);
+    }
 }
