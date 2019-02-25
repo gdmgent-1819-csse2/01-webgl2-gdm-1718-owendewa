@@ -43,4 +43,11 @@ export default class Vector2{
     norm(){
         return Math.sqrt(this.x**2 + this.y**2);
     }
+    /**
+     * dot
+     * calculating dot product of two vectors
+     */
+    dot(v){
+        return (this.x * v.x) + (this.y * v.y);
+    }
 }

@@ -69,4 +69,11 @@ export default class Vector4{
         const norm = Math.sqrt(this.x**2 + this.y**2 + this.z**2 + this.w**2);
         return (this.x/norm) + (this.y/norm) + (this.z/norm) + (this.w/norm); 
     }
+    /**
+     * dot
+     * calculating dot product of two vectors
+     */
+    dot4(v){
+        return (this.x * v.x) + (this.y * v.y) + (this.z * v.z) + (this.w * v.w);
+    }
 }

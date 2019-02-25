@@ -13,6 +13,7 @@ export default class TestVector4 extends TestMatrix {
         this.testSub()
         this.testMul()
         this.testNorm()
+        this.testDot()
     }
     /**
      * Test the addition method.
@@ -62,6 +63,14 @@ export default class TestVector4 extends TestMatrix {
         const actual = [a.norm4()];
         this.assertIdentical(actual, expected)
     }
+    testDot(){
+        console.info('test Vector3.dot()')
+        const a = new Vector4(2, 3, 1, 2)
+        const b = new Vector4(3, 7, 1, 2)
 
+        const expected = [32]
+        const actual = [a.dot4(b)];
+        this.assertIdentical(actual, expected)
+    }
     
 }
