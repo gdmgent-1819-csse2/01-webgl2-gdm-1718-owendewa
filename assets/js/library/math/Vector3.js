@@ -74,4 +74,5 @@ export default class Vector3{
     dot3(v){
         return (this.x * v.x) + (this.y * v.y) + (this.z * v.z);
     }
+    
 }

@@ -1,3 +1,4 @@
+import Matrix2 from './Matrix2.js'
 export default class Vector2{
     /**
      * Represents a 2d Vector
@@ -49,5 +50,12 @@ export default class Vector2{
      */
     dot(v){
         return (this.x * v.x) + (this.y * v.y);
+    }
+    rot(d){
+        const m = new Matrix2([this.x, this.y])
+        m.RotateM2(d)
+        console.log(m)
+        this.x = m.items[0]
+        this.y = m.items[1]
     }
 }
