@@ -63,7 +63,7 @@ export default class Vector4{
     }
     /**
      * Normelisation
-     * changing the vector to a unitvector
+     * changing the 4d vector to a unitvector
      */
     normalisatie4(){
         const norm = Math.sqrt(this.x**2 + this.y**2 + this.z**2 + this.w**2);
@@ -71,7 +71,7 @@ export default class Vector4{
     }
     /**
      * dot
-     * calculating dot product of two vectors
+     * calculating dot product of two 4d vectors
      */
     dot4(v){
         return (this.x * v.x) + (this.y * v.y) + (this.z * v.z) + (this.w * v.w);

@@ -46,7 +46,7 @@ export default class Vector2{
     }
     /**
      * dot
-     * calculating dot product of two vectors
+     * calculating dot product of two 2d vectors
      */
     dot(v){
         return (this.x * v.x) + (this.y * v.y);

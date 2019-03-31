@@ -29,7 +29,12 @@ export default class Canvas {
         window.addEventListener('updateCanvas', event => {
             // loop the updatecanvashanlder every .5 seconds
             setInterval(() =>{
-            this.updateCanvasHandler(event)
+                try{
+                    this.updateCanvasHandler(event)
+                }
+                catch(err) {
+                    console.log(err.message);
+                }
             },500)
         }, false);
 
@@ -41,7 +46,7 @@ export default class Canvas {
         const v_0 = new Vector2(0,0);
         this.data.positions.push(v_0.x, v_0.y)
         this.data.colors.push(...this.colors.white)
-        //Creating second vectors
+        //Creating seconds vectors
         const v1 = new Vector2(0, 0.9)
         this.data.positions.push(v1.x, v1.y)
         this.data.colors.push(...this.colors.black)
@@ -79,7 +84,7 @@ export default class Canvas {
             'white',
         ]
         colors.forEach(color => {
-            //Creating second arm
+            //Creating seconds arm
             v1.rot((Seconds* 6))
             this.data.positions.push(v1.x, v1.y)
             this.data.colors.push(...this.colors[color])

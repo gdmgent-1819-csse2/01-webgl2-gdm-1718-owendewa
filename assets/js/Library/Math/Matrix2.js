@@ -55,7 +55,6 @@ export default class Matrix2{
         d *= Math.PI / 180;
         const cos = Math.cos(d);
         const sin = Math.sin(d);
-
         const result = [
             cos, -sin,
             sin, cos,
