@@ -46,7 +46,7 @@ export default class Canvas {
         const v_0 = new Vector2(0,0);
         this.data.positions.push(v_0.x, v_0.y)
         this.data.colors.push(...this.colors.white)
-        //Creating seconds vectors
+        //Creating seconds vectors 
         const v1 = new Vector2(0, 0.9)
         this.data.positions.push(v1.x, v1.y)
         this.data.colors.push(...this.colors.black)
